@@ -71,27 +71,43 @@ public:
 
 int main()
 {
-    string nome, dataNascimento, endereco, telefone;
+    int n;
+    cout << "Quantos clientes deseja cadastrar? ";
+    cin >> n;
+    cin.ignore(); // Limpa o buffer do teclado para evitar problemas ao usar getline após cin >>
 
-    cout << "Digite o nome: ";
-    getline(cin, nome);
+    Cliente clientes[n];
 
-    cout << "Digite a data de nascimento (dd/mm/aaaa): ";
-    getline(cin, dataNascimento);
+    for (int i = 0; i < n; ++i)
+    {
+        string nome, dataNascimento, endereco, telefone;
 
-    cout << "Digite o endereco: ";
-    getline(cin, endereco);
+        cout << "\nCliente " << i + 1 << ":\n";
+        cout << "Digite o nome: ";
+        getline(cin, nome);
 
-    cout << "Digite o telefone: ";
-    getline(cin, telefone);
+        cout << "Digite a data de nascimento (dd/mm/aaaa): ";
+        getline(cin, dataNascimento);
 
-    Cliente cliente(nome, dataNascimento, endereco, telefone);
+        cout << "Digite o endereco: ";
+        getline(cin, endereco);
 
-    cout << "\nDados do cliente:\n";
-    cout << "Nome: " << cliente.getNome() << endl;
-    cout << "Data de Nascimento: " << cliente.getDataNascimento() << endl;
-    cout << "Endereco: " << cliente.getEndereco() << endl;
-    cout << "Telefone: " << cliente.getTelefone() << endl;
+        cout << "Digite o telefone: ";
+        getline(cin, telefone);
+
+        clientes[i] = Cliente(nome, dataNascimento, endereco, telefone);
+    }
+
+    cout << "\nDados dos clientes:\n";
+
+    for (int i = 0; i < n; ++i)
+    {
+        cout << "\nCliente " << i + 1 << ":\n";
+        cout << "Nome: " << clientes[i].getNome() << endl;
+        cout << "Data de Nascimento: " << clientes[i].getDataNascimento() << endl;
+        cout << "Endereco: " << clientes[i].getEndereco() << endl;
+        cout << "Telefone: " << clientes[i].getTelefone() << endl;
+    }
 
     return 0;
 }
