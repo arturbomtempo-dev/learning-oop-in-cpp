@@ -3,6 +3,13 @@
 
 using namespace std;
 
+Livro::Livro()
+{
+    titulo = "";
+    autor = "";
+    ano = 0;
+}
+
 Livro::Livro(string titulo, string autor, int ano)
 {
     this->titulo = titulo;

@@ -13,6 +13,7 @@ private:
     int ano;
 
 public:
+    Livro();
     Livro(string titulo, string autor, int ano);
     string getTitulo();
     string getAutor();
