@@ -10,7 +10,7 @@ class Animal {
     string nome;
     public:
     Animal(string n);
-    virtual void som();// Metodo para emitir som (polimorfico)
+    virtual void emitirSom();// Metodo para emitir som (polimorfico)
     void mostrarNome();
 };
 

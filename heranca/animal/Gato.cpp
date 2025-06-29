@@ -1,16 +1,19 @@
 #include <iostream>
 #include <string>
 #include "Animal.h"
+#include "Gato.h"
 
 using namespace std;
-
-class Gato : public Animal {
+class Gato : public Animal
+{
 public:
     Gato(string n) : Animal(n) {}
-    void som() override {
+    void emitirSom() override
+    {
         cout << nome << " esta miando." << endl;
     }
-    void escalar() {
+    void escalar()
+    {
         cout << nome << " esta escalando." << endl;
     }
 };

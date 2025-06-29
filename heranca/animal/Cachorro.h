@@ -7,7 +7,7 @@ class Cachorro : public Animal {
     // Construtor para a classe derivada(filha)
     Cachorro(string n);
     // Metodo sobrescrito para emitir som especifico
-    void som() override;
+    void emitirSom() override;
     // Metodo exclusivo da classe cachorro
     void buscar();
 };
