@@ -1,5 +1,1 @@
-## Para compilar
-> g++ Main.cpp -o main
-
-## Rdar
-> ./main
+# Programação Orientada a Objetos em C++
