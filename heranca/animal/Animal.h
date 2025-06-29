@@ -12,6 +12,8 @@ class Animal {
     Animal(string n);
     virtual void emitirSom();// Metodo para emitir som (polimorfico)
     void mostrarNome();
+    void comer();
+    void dormir();
 };
 
 #endif // ANIMAL_H

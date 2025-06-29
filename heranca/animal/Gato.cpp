@@ -4,16 +4,15 @@
 #include "Gato.h"
 
 using namespace std;
-class Gato : public Animal
+
+Gato::Gato(string n) : Animal(n) {}
+
+void Gato::emitirSom()
 {
-public:
-    Gato(string n) : Animal(n) {}
-    void emitirSom() override
-    {
-        cout << nome << " esta miando." << endl;
-    }
-    void escalar()
-    {
-        cout << nome << " esta escalando." << endl;
-    }
-};
+    cout << nome << " esta miando." << endl;
+}
+
+void Gato::escalar()
+{
+    cout << nome << " esta escalando." << endl;
+}
