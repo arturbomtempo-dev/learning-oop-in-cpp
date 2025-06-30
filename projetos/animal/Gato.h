@@ -6,7 +6,6 @@ class Gato : public Animal
 {
 public:
     Gato(string n);
-    // Construtor para a classe derivada(filha)
     void emitirSom() override;
     void escalar();
 };

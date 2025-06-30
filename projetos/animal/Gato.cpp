@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Gato::Gato(string n) : Animal(n) {}
+Gato::Gato(string nome) : Animal(nome) {}
 
 void Gato::emitirSom()
 {
